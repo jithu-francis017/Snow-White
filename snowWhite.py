@@ -28,9 +28,11 @@ Name = "Snow White"
 
 from Listen import Listen
 from Speak import speak
+from Tasks import NonInputExecution, InputExecution
 
 def Main():
     sentence = Listen()
+    result = str(sentence)
 
     if sentence == "bye":
         exit()
@@ -53,7 +55,17 @@ def Main():
         for intent in intents['intents']:
             if tag == intent["tag"]:
                 replay = random.choice(intent["responses"])
-                speak(replay)
+
+                if "time" in replay:
+                    NonInputExecution(replay)
+                elif "date" in replay:
+                    NonInputExecution(replay)
+                elif "wikipedia" in replay:
+                    InputExecution(replay,result)
+                elif "google" in replay:
+                    InputExecution(replay,result)
+                else:
+                    speak(replay)
 
 while True:
     Main()

@@ -24,6 +24,26 @@
         "tag": "jokes",
         "patterns": ["tell me a joke", "say something funny", "make me laugh"],
         "responses": ["Why was the math book sad? Because it had too many problems.", "Why did the tomato turn red? Because it saw the salad dressing!"]
+      },
+      {
+        "tag": "time",
+        "patterns": ["tell me the time", "time", "what is the time","what's the time","what is time now"],
+        "responses": ["time"]
+      },
+      {
+        "tag": "date",
+        "patterns": ["tell me the date","tell me today's date", "date", "what is the date","what's the date"],
+        "responses": ["date"]
+      },
+      {
+        "tag": "wikipedia",
+        "patterns": ["who is","tell me about", "about", "what is","wikipedia"],
+        "responses": ["wikipedia"]
+      },
+      {
+        "tag": "google",
+        "patterns": ["google search","google", "search"],
+        "responses": ["google"]
       }
     ]
       
